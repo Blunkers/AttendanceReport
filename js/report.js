@@ -419,6 +419,7 @@ function getAttendanceTable() {
     zones["1003"] = $("#inp-zone13").is(":checked");
 
 console.log("Fetching reports for: " + guildID);
+console.log("You did it");
 
 $("#report-container").show();
 
