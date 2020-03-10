@@ -11,25 +11,12 @@
 </head>
 
 <body>
+<body>
 <div class="container">
     <form>
         <div class="form-group">
-            <label for="inp-guild">Guild</label>
-            <input class="form-control" id="inp-guild" value="">
-        </div>
-        <div class="form-group">
-            <label for="inp-realm">Realm</label>
-            <input class="form-control" id="inp-realm" value="">
-        </div>
-        <div class="form-group">
-            <label for="inp-region">Region</label>
-            <select class="form-control" id="inp-region" title="Region">
-                <option value="us">US</option>
-                <option value="eu">EU</option>
-                <option value="kr">KR</option>
-                <option value="tw">TW</option>
-                <option value="cn">CN</option>
-            </select>
+            <label for="inp-guild">GuildID</label>
+            <input class="form-control" id="inp-guild" value="486574">
         </div>
         <div class="form-group">
             <label>Zones</label>
@@ -41,29 +28,25 @@
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" id="inp-zone11" type="checkbox" value="11">
+                    <input class="form-check-input" id="inp-zone11" type="checkbox" value="11" checked>
                     Blackwing Lair
                 </label>
             </div>
             <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" id="inp-zone12" type="checkbox" value="12">
+                <label class="form-check-label" >
+                    <input class="form-check-input" id="inp-zone12" type="checkbox" value="12" checked>
                     Onyxia
                 </label>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" id="inp-zone10" type="checkbox" value="10">
+                    <input class="form-check-input" id="inp-zone10" type="checkbox" value="10" checked>
                     Molten Core
                 </label>
             </div>
         </div>
-        <div class="form-group">
-            <label for="inp-realm">Warcraft Logs Pubic Key (Can be found at the bottom of <a href="https://www.warcraftlogs.com/profile"
-                                                                                              target="_blank">this</a> page)</label>
-            <input class="form-control" id="inp-wclkey" value="">
-        </div>
-        <a class="btn btn-primary" onclick="generateReport()" href="#">Generate Report</a>
+        
+        <a class="btn btn-primary" onclick="getAttendanceTable()" href="#">Generate Report</a>
     </form>
     <br>
     <div class="progress">
@@ -72,6 +55,7 @@
     </div>
     <br>
 </div>
+
 
 <div id="report-container" class="container" style="display: none;">
     <ul>

@@ -2,7 +2,7 @@
 Written by Tim Ings <tim@tim-ings.com>
 Copyright 2017 All rights reserved
  */
-
+/*
 var guild;
 var realm;
 var region;
@@ -374,7 +374,8 @@ function generateReport() {
 
     // request wcl reports for given guild
     console.log("Fetching reports for: " + region + "/" + realm + "/" + guild);
-    var request_url = "https://classic.warcraftlogs.com:443/v1/reports/guild/" + guild + "/" + realm + "/" + region + "?api_key=" + wclkey;
+   
+/*   var request_url = "https://classic.warcraftlogs.com:443/v1/reports/guild/" + guild + "/" + realm + "/" + region + "?api_key=" + wclkey;
     $.ajax({
         url: request_url,
         type: "GET",
@@ -390,5 +391,43 @@ function generateReport() {
                 alert("Error 404: Unable to find reports for the given guild/realm/region");
             }
         }
-    });
+    });*/
+	
+	var guildID;
+var zones = {
+    1000: false,
+    1001: false,
+    1002: false,
+    1003: false,
+    1004: false
+};
+var players = [];
+var reportsParsed = 0;
+var reportsTotal = 0;
+
+function getAttendanceTable() {
+  /*var x = document.getElementById("report-container");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }*/
+    guildID = $("#inp-guild").val();
+    zones["1000"] = $("#inp-zone10").is(":checked");
+    zones["1001"] = $("#inp-zone11").is(":checked");
+    zones["1002"] = $("#inp-zone12").is(":checked");
+    zones["1003"] = $("#inp-zone13").is(":checked");
+
+console.log("Fetching reports for: " + guildID);
+
+$("#report-container").show();
+
+var wclurl = 'http://www.warcraftlogs.com/guild/attendance-table/' + guildID + '/0?page=1'
+
+/*$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent(wclurl) + '&callback=?', function(data){
+	alert(data.contents);
+});
+
+data = */
+	
 }
