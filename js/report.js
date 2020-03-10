@@ -430,8 +430,8 @@ var x = new XMLHttpRequest();
     x.open("GET", cors_api_url + wclurl);
     x.onload = x.onerror = function() {
       printResult(
-        x.status + ' ' + x.statusText + '\n\n' +
-        (x.responseText || '')
+        console.log(x.status + ' ' + x.statusText + '\n\n' +
+        (x.responseText || ''))
       );
     };
 
