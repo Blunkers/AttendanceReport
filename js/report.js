@@ -424,6 +424,7 @@ $("#report-container").show();
 
 var wclurl = 'http://www.warcraftlogs.com/guild/attendance-table/' + guildID + '/0?page=1'
 
+
 $.getJSON('http://cors-anywhere.herokuapp.com/' + wclurl, function(data){
 	alert(data.contents);
 });
