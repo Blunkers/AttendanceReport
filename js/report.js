@@ -374,7 +374,7 @@ function generateReport() {
 
     // request wcl reports for given guild
     console.log("Fetching reports for: " + region + "/" + realm + "/" + guild);
-    var request_url = "https://www.warcraftlogs.com:443/v1/reports/guild/" + guild + "/" + realm + "/" + region + "?api_key=" + wclkey;
+    var request_url = "https://classic.warcraftlogs.com:443/v1/reports/guild/" + guild + "/" + realm + "/" + region + "?api_key=" + wclkey;
     $.ajax({
         url: request_url,
         type: "GET",
