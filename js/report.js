@@ -422,12 +422,18 @@ console.log("Fetching reports for: " + guildID);
 
 $("#report-container").show();
 
-var wclurl = 'http://www.warcraftlogs.com/guild/attendance-table/' + guildID + '/0?page=1'
+var wclurl = 'https://www.warcraftlogs.com/guild/attendance-table/' + guildID + '/0?page=1'
 
+var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 
-$.getJSON('https://cors-anywhere.herokuapp.com/' + wclurl, function(data){
-	alert(data.contents);
-});
+var x = new XMLHttpRequest();
+    x.open("GET", cors_api_url + wclurl);
+    x.onload = x.onerror = function() {
+      printResult(
+        x.status + ' ' + x.statusText + '\n\n' +
+        (x.responseText || '')
+      );
+    };
 
 
 	
