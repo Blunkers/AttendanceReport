@@ -424,10 +424,10 @@ $("#report-container").show();
 
 var wclurl = 'http://www.warcraftlogs.com/guild/attendance-table/' + guildID + '/0?page=1'
 
-/*$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent(wclurl) + '&callback=?', function(data){
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent(wclurl) + '&callback=?', function(data){
 	alert(data.contents);
 });
 
-data = */
+
 	
 }
