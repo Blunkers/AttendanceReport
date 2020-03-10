@@ -419,7 +419,7 @@ function getAttendanceTable() {
     zones["1003"] = $("#inp-zone13").is(":checked");
 
 console.log("Fetching reports for: " + guildID);
-console.log("You did it");
+console.log("You did it?");
 
 $("#report-container").show();
 
@@ -437,5 +437,6 @@ var x = new XMLHttpRequest();
     };
 */
 console.log(x);
+console.log("You did it");
 	
 }
