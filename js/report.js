@@ -429,13 +429,13 @@ var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 
 var x = new XMLHttpRequest();
     x.open("GET", cors_api_url + wclurl);
-    x.onload = x.onerror = function() {
+ /*   x.onload = x.onerror = function() {
       printResult(
         console.log(x.status + ' ' + x.statusText + '\n\n' +
         (x.responseText || ''))
       );
     };
-
-console.log("You did it");
+*/
+console.log(x);
 	
 }
