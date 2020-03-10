@@ -436,10 +436,10 @@ var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 
   let xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
-      let response = this.responseText;
+console.log(xhr);
+          let response = this.responseText;
 console.log(response);
-         }
+         
   }
 
   xhr.open("GET", cors_api_url + wclurl);
