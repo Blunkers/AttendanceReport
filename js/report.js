@@ -423,21 +423,27 @@ console.log("You did it?");
 
 $("#report-container").show();
 
-var wclurl = 'https://www.warcraftlogs.com/guild/attendance-table/' + guildID + '/0?page=1'
+var wclurl = 'https://classic.warcraftlogs.com/guild/attendance-table/' + guildID + '/0/0?page=1'
 
 var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 
-var x = new XMLHttpRequest();
-    x.open("GET", cors_api_url + wclurl);
-	x.send();
- /*   x.onload = x.onerror = function() {
-      printResult(
+/*let x = new XMLHttpRequest();
+  x.open("GET", cors_api_url + wclurl);
+  x.onload = x.onerror = function() {
         console.log(x.status + ' ' + x.statusText + '\n\n' +
         (x.responseText || ''))
-      );
-    };
-*/
-console.log(x);
-console.log("You did it");
+  };*/
+
+  let xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState === 4 && this.status === 200) {
+      let response = JSON.parse(this.responseText);
+console.log(response);
+         }
+  }
+
+  xhr.open("GET", cors_api_url + wclurl);
+  xhr.setRequestHeader("Accept", 'application/json');
+  xhr.send();
 	
 }
