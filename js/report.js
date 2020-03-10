@@ -367,10 +367,10 @@ function generateReport() {
     realm = $("#inp-realm").val();
     region = $("#inp-region").val();
     wclkey = $("#inp-wclkey").val();
-    zones["10"] = $("#inp-zone10").is(":checked");
-    zones["11"] = $("#inp-zone11").is(":checked");
-    zones["12"] = $("#inp-zone12").is(":checked");
-    zones["13"] = $("#inp-zone13").is(":checked");
+    zones["1000"] = $("#inp-zone10").is(":checked");
+    zones["1001"] = $("#inp-zone11").is(":checked");
+    zones["1002"] = $("#inp-zone12").is(":checked");
+    zones["1003"] = $("#inp-zone13").is(":checked");
 
     // request wcl reports for given guild
     console.log("Fetching reports for: " + region + "/" + realm + "/" + guild);
