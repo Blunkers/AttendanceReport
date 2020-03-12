@@ -1,0 +1,4866 @@
+		<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="keywords" content="World of Warcraft, WoW, MMO, MMORPG, Games, Raid, Combatlog, DPS, Blizzard, Final Fantasy, WildStar, Elder Scrolls, Video Games, Multiplayer, Online Games, Mods, Trion, Rift">
+		<title>Warcraft Logs - Combat Analysis for Warcraft</title>
+		<link type="text/css" href="https://dmszsuqyoe6y6.cloudfront.net/css/global.min.css?v=17" rel="stylesheet">
+		<link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
+		<link rel="icon" type="image/png" href="https://dmszsuqyoe6y6.cloudfront.net/img/warcraft/favicon.png">
+		<meta name="robots" content="noindex">
+		<link type="text/css" href="https://dmszsuqyoe6y6.cloudfront.net/css/guild.css?v=10" rel="stylesheet">
+		<style>
+			.fg-toolbar { background:none !important; text-align:right; border:none !important; }
+			th { outline-style: none !important; cursor: default; padding: 2px; }
+			#attendance-table { border-collapse: collapse; background-color: black; border-radius:0;  }
+			#attendance-table td { padding: 2px 6px 2px; border: 1px solid #333333; }
+			#attendance-table th { padding: 2px 6px 2px; white-space:nowrap; }
+			#attendance-table span.ui-icon { float: right; margin-left:-2px }
+			tr.even td { background-color: black !important; }
+			tr.odd td { background-color: black !important }
+			#attendance-table { font-size: 12px; }
+			#attendance-table tr { cursor: default; }
+			#teams-menubar { position:relative; margin:0 0 5px 5px !important; border:none!important; background:none!important; position:relative;top:2px }
+			#teams-menubar > li > a { padding-top:1px !important; padding-bottom:1px !important; }
+			tr.even td.present, tr.odd td.present { background-color: #106010 !important; color: #106010 !important; }
+			tr.even td.benched, tr.odd td.benched { background-color: rgb(84,82,20) !important; color: rgb(84,82,20) !important; }
+			.benched-fg { color: rgb(144,142,25) }
+			#attendance-menubar { position:relative; z-index:9999; }
+			th.report-cell { min-width:38px; width:38px; max-width:38px }
+		</style>
+		<style>
+			/* Tighten up scrollers in reports pages */
+			.mCSB_inside > .mCSB_container { margin-right:20px !important }
+			.mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden { margin-right:0 !important }
+			.search-white { color: white; font-size:22px; }
+			.searchbutton-mini-image { padding-left:7px; padding-top:3px; }
+			.compact-search-container { height:36px; display:flex; align-items:center; }
+			.search-compact { font-size:28px; margin-top:-3px; }
+			.zmdi-hc-spin { animation: zmdi-spin 2.5s infinite linear; }
+			.edge-hide { opacity: 0.01; }
+		</style>
+		<script async="" src="https://a.pub.network/warcraftlogs-com/pubfig.min.js"></script>
+		<script data-cfasync="false" type="text/javascript">
+			var freestar = freestar || {};
+			  freestar.hitTime = Date.now();
+			  freestar.queue = freestar.queue || [];
+			  freestar.config = freestar.config || {};
+			  freestar.debug = window.location.search.indexOf('fsdebug') === -1 ? false : true;
+			
+			  // Tag IDs set here, must match Tags served in the Body for proper setup
+			  freestar.config.enabled_slots = [
+			    "warcraftlogs_728x90_970x90_970x250_320x50_ATF",
+			      "warcraftlogs_728x90_970x90_970x250_320x50_BTF"
+			  ];
+			
+			  !function(a,b){var c=b.getElementsByTagName("script")[0],d=b.createElement("script"),e="https://a.pub.network/warcraftlogs-com";e+=freestar.debug?"/qa/pubfig.min.js":"/pubfig.min.js",d.async=!0,d.src=e,c.parentNode.insertBefore(d,c)}(window,document);
+		</script>
+		<style>
+			@media print {#ghostery-purple-box {display:none !important}}
+		</style>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.min.js"></script>
+		<script>
+			jQuery.browser = {};
+		(function () {
+		    jQuery.browser.msie = false;
+		    jQuery.browser.version = 0;
+		    if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+		        jQuery.browser.msie = true;
+		        jQuery.browser.version = RegExp.$1;
+		    }
+		})();
+			
+			function edgeRevert() { $(".edge-hide").css('transform', ''); $(".edge-hide").removeClass('edge-hide'); }
+			function edgeZoom() { $(".edge-hide").css('transform', 'scale(2)'); setTimeout(edgeRevert, 50); }
+			function edgeSpriteFix(container) { 
+				if (navigator.userAgent.indexOf("Edge") == -1)
+					return
+				var selector = (container ? container + ' ' : '') + ".sprite"
+				$(selector).addClass('edge-hide')
+				setTimeout(edgeZoom, 10)
+			}
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-duration-format/2.2.2/moment-duration-format.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin-with-iframe-fix@3.1.6/jquery.mCustomScrollbar.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+		<script src="https://dmszsuqyoe6y6.cloudfront.net/js/global.min.js?v=2"></script>
+		<script>
+			moment.locale("en");
+		</script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/ju/jszip-2.5.0/dt-1.10.18/b-1.5.4/b-html5-1.5.4/r-2.2.2/datatables.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(function() {
+				$('#attendance-menubar').smartmenus({
+					showOnClick: true,
+					mainMenuSubOffsetX: -1,
+					mainMenuSubOffsetY: -1,
+					subMenusSubOffsetX: 10,
+					subMenusSubOffsetY: 0
+					});
+			});
+			
+			var filterZone = -1
+			var filterPage = 1
+			var filterGuild = 486574;
+			var filterTeam = 0;
+			var region = "US";
+			
+			function changeLink(link, params)
+			{
+				var newURL = $.param.fragment(window.location.href, params, 2)
+				link.href = newURL
+				return true
+			}
+			
+			function loadViews(params)
+			{
+				var oldFilterZone = filterZone
+				filterZone = params.zone ? params.zone : 0
+				var needToLoadMainTable = false
+				if (oldFilterZone != filterZone) {
+					needToLoadMainTable = true
+					$("#filter-zone-text").html("For " + $("#zone-" + filterZone).html())
+				}
+				
+				var oldFilterPage = filterPage
+				filterPage = params.page ? params.page : 1
+				if (oldFilterPage != filterPage)
+					needToLoadMainTable = true
+				
+				if (needToLoadMainTable) {
+					// Erase the cached chart data and put in our loading indicator.
+					document.getElementById('graph-loading').style.display = 'block'
+					document.getElementById('table-container').style.opacity = '0.4'
+			
+					// Put up our event killer.hasF
+					document.getElementById('event-killer').style.display = ''
+				
+					loadTable()
+				}
+			}
+			
+			$(window).bind('hashchange', function(e) {
+				var params = $.deparam.fragment()
+				loadViews(params)  
+			})
+			
+			var errorHTML = "<div style='text-align:center; margin-top:30px'><p>Error: Unable to fetch data.</p></div>";
+			
+			function tableLoaded(response, status, xhr) {
+				document.getElementById("table-container").style.opacity = ''
+				document.getElementById('graph-loading').style.display = 'none'
+				document.getElementById('event-killer').style.display = 'none'
+				
+				if (status == "error") {
+					document.getElementById('table-container').innerHTML = errorHTML
+					return;
+				}
+			}
+			
+			function loadTable()
+			{
+				var loadString = '/guild/attendance-table/' + filterGuild + "/" + filterTeam + "/" + filterZone + "?page=" + filterPage
+				$("#table-container").load(loadString, tableLoaded)
+			}
+			
+			function setPage(page, link)
+			{
+				if (filterPage == page)
+					return false
+					
+				var params = $.deparam.fragment()
+				if (page == 1)
+					delete params.page
+				else
+					params.page = page
+				
+				document.body.scrollTop = 0
+			
+				return changeLink(link, params)
+			}
+			
+			function setZone(zone, link)
+			{
+				if (filterZone == zone)
+					return false
+				
+				var params = $.deparam.fragment()
+				if (zone == 0)
+					delete params.zone
+				else
+					params.zone = zone
+				delete params.page
+			
+				document.body.scrollTop = 0
+			
+				return changeLink(link, params)
+			}
+			
+			function benchToggled()
+			{
+			}
+			
+			function benchToggleFailed()
+			{
+			}
+			
+			function toggleBench(cell, reportCode, name)
+			{
+				if (!canBenchPlayers)
+					return
+					
+				$(cell).toggleClass("absent")
+				$(cell).toggleClass("benched")
+				
+				$.getJSON("/guild/toggle-bench/" + reportCode + '/' + name, benchToggled).fail(benchToggleFailed);
+			}
+		</script>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({
+			    google_ad_client: "ca-pub-1955439907736310"
+			  });
+		</script>
+		<script>
+			window.onload = function(){ 
+				edgeSpriteFix()	
+			setTimeout(function() { 
+			var ad = document.querySelector("ins.adsbygoogle");
+			if (ad && ad.innerHTML.replace(/\s/g, "").length == 0) {
+			    ad.style.cssText = 'display:block !important'; 
+			    ad.parentNode.innerHTML += '<div style="padding:5px; background-color:#202020; border:1px solid #555555; margin:5px 5px 10px 5px; display:inline-block; text-align:left">You appear to be blocking our ads with an Ad Blocker. Warcraft Logs depends on these ads to help cover our high server costs. Please add *.warcraftlogs.com to your ad blocker\'s whitelist or consider supporting the site by sponsoring it on <a href="https://www.patreon.com/warcraftlogs">Patreon</a>.</div>';
+			}
+			}, 1000);
+			};
+		</script> <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-141717050-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+			  gtag('config', 'UA-141717050-1');
+		</script>
+		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+		<script>
+			window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+			  "palette": {
+			    "popup": {
+			      "background": "#237afc"
+			    },
+			    "button": {
+			      "background": "#fff",
+			      "text": "#237afc"
+			    }
+			  }
+			})});
+		</script>
+		<style></style>
+	</head>
+
+	<body class="responsive 
+ warcraft
+">
+		<div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-block cc-bottom cc-color-override--1360619034 cc-invisible" style="display: none;">
+			<!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">This website uses cookies to ensure you get the best experience on our website. <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="https://cookiesandyou.com" rel="noopener noreferrer nofollow" target="_blank">Learn more</a></span><div class="cc-compliance"><a aria-label="dismiss cookie message" role="button" tabindex="0" class="cc-btn cc-dismiss">Got it!</a></div>
+			<!--googleon: all-->
+		</div>
+		<aside class="sidebar left-bar" id="zr-sidebar"></aside>
+		<aside class="sidebar right-bar" id="acc-sidebar"></aside>
+		<ul id="main-menu" class="sm sm-black" data-smartmenus-id="1583857052760494">
+			<li id="home-menu"><a href="/"><img id="home-logo" src="https://dmszsuqyoe6y6.cloudfront.net/img/warcraft/favicon.png"> </a></li>
+			<li id="zones-and-realms-toggle" class="sidebar-opener" onmouseover="lazyLoadSidebar(this, '#zr-sidebar')" onclick="sidebarTogglerClicked(this, '#zr-sidebar')"> <span></span> <span></span> <span></span> </li>
+			<style>
+				.game-selector { font-size:12px !important;  margin:5px 6px 0 -5px !important; padding:1px 0 2px!important; }
+				.game-selector .zmdi { font-size:16px !important; vertical-align:-2px; padding-right:2px; }
+				a.game-selector-item { color:white !important; padding:1px 6px!important; }
+				.compact-search .game-selector { display:none }
+				.game-selector .smaller { font-size:12px } 
+				#twitch-link-icon { width:16px; height:16px; display:block; }
+				#stream-count-box { display:flex; margin:10px 10px 8px 50px; border:1px solid #555555; align-items:center; background-color:#202020 }
+				#stream-count-box > a { display:flex }
+				#stream-count-box span { margin-left:10px }
+				#stream-count-box .compact-stream-count { display:none }
+				
+				#report-info-menu ~ #stream-count-box .compact-stream-count { display:inline; font-size:10px }
+				#report-info-menu ~ #stream-count-box .verbose-stream-count { display:none }
+				
+				@media (max-width:1200px)
+				{
+					#stream-count-box span { font-size:10px !important; }
+				}
+				
+				@media (max-width:1100px)
+				{
+					#stream-count-box .compact-stream-count { display:inline }
+					#stream-count-box .verbose-stream-count { display:none }
+					
+				}
+				
+				@media (max-width:900px)
+				{
+					#stream-count-box { display:none !important }
+				}
+				
+				@media (max-width:600px)
+				{
+					.game-selector { display:none !important }
+				}
+			</style>
+			<li class="game-selector"> <a class="game-selector-item" href="//www.warcraftlogs.com"><span class="zmdi zmdi-square-o"></span> <span class="smaller">Live</span></a> <a class="game-selector-item" href="//classic.warcraftlogs.com"><span class="zmdi zmdi-check-square"></span> <span class="smaller">Classic</span></a> </li>
+			<li id="searchfield-compact-menu"><a href="#" class="sidebar-opener" onclick="sidebarTogglerClicked(this, '#searchfield-mobile-wrapper'); document.getElementById('searchfield-mobile').focus(); document.getElementById('searchfield-mobile').select(); return false"><span class="compact-search-container"><span class="zmdi zmdi-search search-white search-compact"></span></span></a> <div id="searchfield-mobile-wrapper" class="sidebar top-bar">
+					<div class="searchfield-mini-wrapper">
+						<form style="margin:0;width:100%" accept-charset="utf-8" method="get" action="/search/"><input class="searchfield-mini ui-autocomplete-input" id="searchfield-mobile" name="term" placeholder="Enter a player, guild, or realm" autocomplete="off"> <span onclick="this.parentNode.submit()" class="searchbutton-mini" id="searchbutton-mobile"><span class="zmdi zmdi-search search-white searchbutton-mini-image"></span></span><div id="autocomplete-mobile-results">
+								<ul id="ui-id-2" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul>
+							</div>
+						</form>
+					</div>
+				</div>
+			</li>
+			<li id="searchfield-menu">
+				<div id="searchfield-mini-wrapper" class="searchfield-mini-wrapper">
+					<form style="margin:0;width:100%" accept-charset="utf-8" method="get" action="/search/"><input class="searchfield-mini ui-autocomplete-input" id="searchfield-mini" name="term" placeholder="Enter a player, guild, or realm" autocomplete="off"> <span onclick="this.parentNode.submit()" class="searchbutton-mini" id="searchbutton-mini"><span class="zmdi zmdi-search search-white searchbutton-mini-image"></span></span><div id="autocomplete-mini-results">
+							<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul>
+						</div>
+					</form>
+				</div>
+			</li>
+			<li id="stream-count-box"><a href="/streams/"><img id="twitch-link-icon" src="https://dmszsuqyoe6y6.cloudfront.net/img/social/twitch.png"> <span class="compact-stream-count">1</span><span class="verbose-stream-count">1 Players Streaming</span></a></li>
+			<li class="right" id="lang-switcher-menu"><a href="#" class="has-submenu"><span class="sub-arrow">+</span><span class="zmdi zmdi-translate"></span> <span id="lang-switcher-text">English</span></a> <ul class="levels">
+					<li><a id="lang-switcher-de" href="//de.classic.warcraftlogs.com/">Deutsch</a></li>
+					<li><a id="lang-switcher-en" href="//classic.warcraftlogs.com/">English</a></li>
+					<li><a id="lang-switcher-es" href="//es.classic.warcraftlogs.com/">Español</a></li>
+					<li><a id="lang-switcher-fr" href="//fr.classic.warcraftlogs.com/">Français</a></li>
+					<li><a id="lang-switcher-it" href="//it.classic.warcraftlogs.com/">Italiano</a></li>
+					<li><a id="lang-switcher-br" href="//br.classic.warcraftlogs.com/">Português (Brasil)</a></li>
+					<li><a id="lang-switcher-ru" href="//ru.classic.warcraftlogs.com/">Русский</a></li>
+					<li><a id="lang-switcher-ko" href="//ko.classic.warcraftlogs.com/">한국어</a></li>
+					<li><a id="lang-switcher-tw" href="//tw.classic.warcraftlogs.com/">繁體中文</a></li>
+					<li><a id="lang-switcher-cn" href="//cn.classic.warcraftlogs.com/">简体中文</a></li>
+				</ul>
+			</li>
+			<script>
+				document.getElementById("lang-switcher-text").innerHTML = document.getElementById("lang-switcher-en").innerHTML
+			</script>
+			<li id="acc-toggle" class="right sidebar-opener" onmouseover="lazyLoadSidebar(this, '#acc-sidebar')" onclick="sidebarTogglerClicked(this, '#acc-sidebar')"> <img src="https://dmszsuqyoe6y6.cloudfront.net/img/common/profile.png" class="profile-image"> </li>
+		</ul>
+		<div id="content-and-footer">
+			<div id="top-banner">
+				<!-- Tag ID: warcraftlogs_728x90_970x90_970x250_320x50_ATF -->
+				<div align="center" id="warcraftlogs_728x90_970x90_970x250_320x50_ATF">
+					<script data-cfasync="false" type="text/javascript">
+						freestar.queue.push(function () { googletag.display('warcraftlogs_728x90_970x90_970x250_320x50_ATF'); });
+					</script>
+				</div>
+			</div>
+			<div id="guild-bar">
+				<div id="guild-bar-inset"> <img id="guild-portrait-image" src="https://dmszsuqyoe6y6.cloudfront.net/img/warcraft/faction-0.png"> <div class="guild-block" id="guild-title"> <a href="/guild/id/486574" class="guild-name white faction-0">Serendipity Late Night</a> <a id="guildserver" href="/server/id/5002/"><br>US - Bloodsail Buccaneers</a> <a id="guildurl" href="http://"><br>http://</a> </div>
+					<div id="guild-description"> </div>
+					<div id="links-box">
+						<div class="centered-box">
+							<table cellpadding="2" cellspacing="0" <tr="">
+								<tbody>
+									<tr>
+										<td><a target="_blank" href="http://us.battle.net/wow/guild/bloodsail-buccaneers/Serendipity%20Late%20Night/"> <img class="external-icon" title="View Armory Page" src="https://dmszsuqyoe6y6.cloudfront.net/img/warcraft/wow_square_xl.png"><span class="external-link-text">Armory</span> </a> </td>
+									</tr>
+									<tr>
+										<td> <a target="_blank" href="https://raider.io/guilds/us/bloodsail-buccaneers/Serendipity%20Late%20Night"> <img class="external-icon" title="View Raider.IO Page" "=" " src="https://dmszsuqyoe6y6.cloudfront.net/img/warcraft/raiderio_square_xl.png "><span class="external-link-text ">Raider.IO</span>
+
+</a></td></tr></tbody></table>
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+<div id="guild-commands ">
+<div id="guild-commands-inset ">
+<a class="guild-tab " href="/guild/calendar/486574/ " id="calendar-command " title="Calendar "><span class="zmdi zmdi-calendar "></span><span class="guild-tab-text ">Calendar</span></a>
+<a class="guild-tab " href="/guild/reports-list/486574/ " id="reportslist-command " title="Reports "><span class="zmdi zmdi-view-list "></span><span class="guild-tab-text ">Reports</span></a>
+<a class="guild-tab " href="/guild/settings/486574/ " id="roster-command " title="Settings "><span class="zmdi zmdi-settings "></span><span class="guild-tab-text ">Settings</span></a>
+
+<a class="guild-tab selected " href="/guild/attendance/486574 " id="attendance-command " title="Attendance "><span class="zmdi zmdi-accounts-list "></span><span class="guild-tab-text ">Attendance</span></a>
+
+<a class="guild-tab " id="rankings-command " href="/guild/rankings/486574/latest/ " title="Rankings "><span class="zmdi zmdi-sort "></span><span class="guild-tab-text ">Rankings</span></a>
+
+<a class="guild-tab " id="discord-command " href="/guild/discord/486574/ " title="Widgets "><span class="zmdi zmdi-widgets "></span><span class="guild-tab-text ">Discord</span></a>
+
+</div>
+</div>
+<div style="clear:both "></div>
+
+
+<div id="content " class="not-subscribed ">
+	
+<script>
+var canBenchPlayers = true;
+</script>
+
+<div class="dialog-block pulled-up ">
+
+
+<ul id="teams-menubar " class="sm sm-black guild-tab " style="float:right; margin-top:-8px; z-index:10000; " data-smartmenus-id="15838570527640718 ">
+<li id="filter-team-selection-container "><a class="filter-item has-submenu " href="# "><span class="sub-arrow ">+</span>All Raids</a>
+<ul>
+<li><a class="filter-item " href="/guild/attendance/486574 ">All Raids</a>
+</li><li class="separator "></li>
+
+
+</ul>
+</li></ul>
+
+<script>
+
+$(function() {
+	$('#teams-menubar').smartmenus({
+		showOnClick: true,
+		mainMenuSubOffsetX: -1,
+		mainMenuSubOffsetY: -1,
+		subMenusSubOffsetX: 10,
+		subMenusSubOffsetY: 0
+		});
+});
+
+function refreshMenus()
+{
+	$('#teams-menubar').smartmenus('refresh');
+}
+
+setTimeout(refreshMenus, 1000)
+
+</script>
+
+<ul id="attendance-menubar " class="sm sm-black filter-bar-menu " data-smartmenus-id="15838570527624832 ">
+<li id="filter-zone-selection-container "><a class="filter-item has-submenu " href="# "><span class="sub-arrow ">+</span><span id="filter-zone-text ">For All Zones</span></a>
+<ul>
+<li><a id="zone-0 " class="Boss " href="# " onclick="return setZone(0, this) " oncontextmenu="setZone(0, this) ">All Zones</a></li>
+<li class="separator "></li>
+
+
+<li><a id="zone-1002 " class="Boss " href="# " onclick="return setZone(1002, this) " oncontextmenu="setZone(1002, this) ">Blackwing Lair</a></li>
+<li><a id="zone-1001 " class="Boss " href="# " onclick="return setZone(1001, this) " oncontextmenu="setZone(1001, this) ">Onyxia</a></li>
+<li><a id="zone-1000 " class="Boss " href="# " onclick="return setZone(1000, this) " oncontextmenu="setZone(1000, this) ">Molten Core</a></li>
+
+
+</ul>
+
+</li></ul>
+
+<div style="margin:5px " id="attendance-content ">
+<div id="graph-wrapper " style="min-height:600px ">
+<div id="event-killer " style="display: none; "></div>
+<div id="graph-loading " style="display: none; "><p>Loading Data...</p><p><span class="zmdi zmdi-spinner zmdi-hc-spin " style="color:white; font-size:36px "></span></p></div>
+
+<div id="table-container " style=" "><p style="font-size:11px ">Officers in the guild can click empty squares to designate a character as being on the bench for the entire night. Benched players show up with a <span class="benched-fg ">gold background</span>.</p>
+
+
+<div style="overflow-x:auto ">
+<div id="attendance-table_wrapper " class="dataTables_wrapper dt-jqueryui no-footer "><table cellspacing="0 " cellpadding="0 " id="attendance-table " class="dataTable no-footer " role="grid ">
+<thead>
+<tr role="row "><th class="sorting ui-state-default sorting_asc " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-sort="ascending " aria-label="Name : activate to sort column descending " style="width: 110px; "><div class="DataTables_sort_wrapper ">Name
+<span class="DataTables_sort_icon css_right ui-icon ui-icon-triangle-1-n "></span></div></th><th class="sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label="Att.% : activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper ">Att.%
+<span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Ony3/7: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-24065843 " href="/reports/7TZyAMYF12K6tWgX/ ">
+Ony<br>3/7</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Mol3/7: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-24065834 " href="/reports/vRxt6BnZrMbDThw9/ ">
+Mol<br>3/7</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Bla3/6: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-24044110 " href="/reports/jyabXgVfHmW41G6P/ ">
+Bla<br>3/6</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Ony2/29: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23877699 " href="/reports/xf8RmDqTtJ4KhWVY/ ">
+Ony<br>2/29</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Mol2/29: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23877692 " href="/reports/gmFp3JdtKaV2kbq9/ ">
+Mol<br>2/29</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Ony2/29: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23857592 " href="/reports/Q6x1nCFZJwR3WKbG/ ">
+Ony<br>2/29</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Bla2/28: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23855745 " href="/reports/a3ZqyABvpn27fxY8/ ">
+Bla<br>2/28</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Ony2/22: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23683636 " href="/reports/Bpzf7ZDVtNhnTWFb/ ">
+Ony<br>2/22</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Mol2/22: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23683622 " href="/reports/GNCF4f9Z8PtDbTX6/ ">
+Mol<br>2/22</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Bla2/21: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23662377 " href="/reports/qMXtJz6pkb1hcgrw/ ">
+Bla<br>2/21</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Mol2/16: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23526488 " href="/reports/dTpt9mAxXzRP7LbY/ ">
+Mol<br>2/16</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Bla2/16: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23525525 " href="/reports/m7dzMV6pGYbQRWHD/ ">
+Bla<br>2/16</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Bla2/15: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23497398 " href="/reports/k1VJ7TaGFHYxWn9r/ ">
+Bla<br>2/15</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Ony2/14: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23474418 " href="/reports/QHw27hrb1DnaGfMv/ ">
+Ony<br>2/14</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Ony2/7: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23373072 " href="/reports/kntH6B2dYRWj4hDz/ ">
+Ony<br>2/7</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th><th class="report-cell sorting ui-state-default " tabindex="0 " aria-controls="attendance-table " rowspan="1 " colspan="1 " aria-label=" Ony2/7: activate to sort column ascending " style="width: 38px; "><div class="DataTables_sort_wrapper "><a id="reportdate-23373037 " href="/reports/abZF2rTd4jCnzLqA/ ">
+Ony<br>2/7</a><span class="DataTables_sort_icon css_right ui-icon ui-icon-caret-2-n-s "></span></div></th></tr></thead>
+<tbody>
+<tr role="row " class="odd "><td class="Rogue sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Aglovale
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">87%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Aglovale&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Aglovale&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="even "><td class="Druid sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Arborholt
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">75%
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;7TZyAMYF12K6tWgX&quot;, &quot;Arborholt&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;vRxt6BnZrMbDThw9&quot;, &quot;Arborholt&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Arborholt&quot;) ">
+	
+2 
+
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Arborholt&quot;) ">
+	
+2 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Arborholt&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Arborholt&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="odd "><td class="Mage sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Arcameases
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">62%
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;7TZyAMYF12K6tWgX&quot;, &quot;Arcameases&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;vRxt6BnZrMbDThw9&quot;, &quot;Arcameases&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;jyabXgVfHmW41G6P&quot;, &quot;Arcameases&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;xf8RmDqTtJ4KhWVY&quot;, &quot;Arcameases&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;gmFp3JdtKaV2kbq9&quot;, &quot;Arcameases&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;a3ZqyABvpn27fxY8&quot;, &quot;Arcameases&quot;) ">
+	
+2 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Arcameases&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Warrior sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Avalie
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">6%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;vRxt6BnZrMbDThw9&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;jyabXgVfHmW41G6P&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;xf8RmDqTtJ4KhWVY&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;gmFp3JdtKaV2kbq9&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Q6x1nCFZJwR3WKbG&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;a3ZqyABvpn27fxY8&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;qMXtJz6pkb1hcgrw&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;dTpt9mAxXzRP7LbY&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;m7dzMV6pGYbQRWHD&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;k1VJ7TaGFHYxWn9r&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Avalie&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Priest sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Ayreth
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">6%
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;7TZyAMYF12K6tWgX&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;vRxt6BnZrMbDThw9&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;jyabXgVfHmW41G6P&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;xf8RmDqTtJ4KhWVY&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;gmFp3JdtKaV2kbq9&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Q6x1nCFZJwR3WKbG&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;a3ZqyABvpn27fxY8&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;qMXtJz6pkb1hcgrw&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;dTpt9mAxXzRP7LbY&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;m7dzMV6pGYbQRWHD&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;k1VJ7TaGFHYxWn9r&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Ayreth&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Warlock sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Azewla
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">68%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;xf8RmDqTtJ4KhWVY&quot;, &quot;Azewla&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;gmFp3JdtKaV2kbq9&quot;, &quot;Azewla&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Q6x1nCFZJwR3WKbG&quot;, &quot;Azewla&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;a3ZqyABvpn27fxY8&quot;, &quot;Azewla&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;dTpt9mAxXzRP7LbY&quot;, &quot;Azewla&quot;) ">
+	
+2 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Azewla&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Warrior sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Blinkers
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Blinkers&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="even "><td class="Priest sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Buxxy
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">87%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Buxxy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Buxxy&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="odd "><td class="Warrior sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Cheerry
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Cheerry&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Warrior sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Cherrykiss
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Cherrykiss&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="odd "><td class="Mage sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Clouddy
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Clouddy&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="even "><td class="Mage sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Coldhammer
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Coldhammer&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Rogue sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Demoneye
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">75%
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;7TZyAMYF12K6tWgX&quot;, &quot;Demoneye&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;vRxt6BnZrMbDThw9&quot;, &quot;Demoneye&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Demoneye&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Demoneye&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Priest sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Diethe
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">81%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Diethe&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Diethe&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Diethe&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Druid sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Dojacat
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">87%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;Q6x1nCFZJwR3WKbG&quot;, &quot;Dojacat&quot;) ">
+	
+2 
+
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;a3ZqyABvpn27fxY8&quot;, &quot;Dojacat&quot;) ">
+	
+2 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Dojacat&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Dojacat&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Rogue sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Doki
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Doki&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Mage sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Explosive
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">87%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Explosive&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Explosive&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="even "><td class="Priest sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Failbaddon
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">56%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;qMXtJz6pkb1hcgrw&quot;, &quot;Failbaddon&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;dTpt9mAxXzRP7LbY&quot;, &quot;Failbaddon&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;m7dzMV6pGYbQRWHD&quot;, &quot;Failbaddon&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;k1VJ7TaGFHYxWn9r&quot;, &quot;Failbaddon&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Failbaddon&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Failbaddon&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Failbaddon&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Hunter sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Felkon
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">87%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Felkon&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Felkon&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="even "><td class="Rogue sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Frappy
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">6%
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;7TZyAMYF12K6tWgX&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;vRxt6BnZrMbDThw9&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;jyabXgVfHmW41G6P&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;xf8RmDqTtJ4KhWVY&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;gmFp3JdtKaV2kbq9&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Q6x1nCFZJwR3WKbG&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;a3ZqyABvpn27fxY8&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;qMXtJz6pkb1hcgrw&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;dTpt9mAxXzRP7LbY&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;m7dzMV6pGYbQRWHD&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;k1VJ7TaGFHYxWn9r&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Frappy&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Paladin sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Goebel
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">56%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Goebel&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Goebel&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;m7dzMV6pGYbQRWHD&quot;, &quot;Goebel&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;k1VJ7TaGFHYxWn9r&quot;, &quot;Goebel&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Goebel&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Goebel&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Goebel&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Warrior sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Habit
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">43%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Habit&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Habit&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;qMXtJz6pkb1hcgrw&quot;, &quot;Habit&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;dTpt9mAxXzRP7LbY&quot;, &quot;Habit&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;m7dzMV6pGYbQRWHD&quot;, &quot;Habit&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;k1VJ7TaGFHYxWn9r&quot;, &quot;Habit&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Habit&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Habit&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Habit&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Paladin sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Hevenswrath
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">6%
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;7TZyAMYF12K6tWgX&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;vRxt6BnZrMbDThw9&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;jyabXgVfHmW41G6P&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;xf8RmDqTtJ4KhWVY&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;gmFp3JdtKaV2kbq9&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Q6x1nCFZJwR3WKbG&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;a3ZqyABvpn27fxY8&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;qMXtJz6pkb1hcgrw&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;dTpt9mAxXzRP7LbY&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;m7dzMV6pGYbQRWHD&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;k1VJ7TaGFHYxWn9r&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Hevenswrath&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="even "><td class="Paladin sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Hodanna
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Hodanna&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Hunter sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Jiada
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">18%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;xf8RmDqTtJ4KhWVY&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;gmFp3JdtKaV2kbq9&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Q6x1nCFZJwR3WKbG&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;a3ZqyABvpn27fxY8&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;qMXtJz6pkb1hcgrw&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;dTpt9mAxXzRP7LbY&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;m7dzMV6pGYbQRWHD&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;k1VJ7TaGFHYxWn9r&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Jiada&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Rogue sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Justice
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Justice&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="odd "><td class="Paladin sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Justinius
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">87%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Justinius&quot;) ">
+	
+2 
+
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Justinius&quot;) ">
+	
+2 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Justinius&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Justinius&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="even "><td class="Rogue sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Kirraa
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">87%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;jyabXgVfHmW41G6P&quot;, &quot;Kirraa&quot;) ">
+	
+2 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Kirraa&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Kirraa&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Rogue sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Kross
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">75%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;xf8RmDqTtJ4KhWVY&quot;, &quot;Kross&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;gmFp3JdtKaV2kbq9&quot;, &quot;Kross&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Kross&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Kross&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="even "><td class="Paladin sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Luxvult
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Luxvult&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Hunter sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Moonswept
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Moonswept&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="even "><td class="Priest sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Narnok
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Narnok&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Warrior sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Olfgrim
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;dTpt9mAxXzRP7LbY&quot;, &quot;Olfgrim&quot;) ">
+	
+2 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Olfgrim&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Warrior sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Pelatov
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">12%
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;7TZyAMYF12K6tWgX&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;vRxt6BnZrMbDThw9&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;jyabXgVfHmW41G6P&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;xf8RmDqTtJ4KhWVY&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;gmFp3JdtKaV2kbq9&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Q6x1nCFZJwR3WKbG&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;a3ZqyABvpn27fxY8&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;qMXtJz6pkb1hcgrw&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;m7dzMV6pGYbQRWHD&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;k1VJ7TaGFHYxWn9r&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Pelatov&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="odd "><td class="Hunter sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Perasuolen
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">6%
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;7TZyAMYF12K6tWgX&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;jyabXgVfHmW41G6P&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;xf8RmDqTtJ4KhWVY&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;gmFp3JdtKaV2kbq9&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Q6x1nCFZJwR3WKbG&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;a3ZqyABvpn27fxY8&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;qMXtJz6pkb1hcgrw&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;dTpt9mAxXzRP7LbY&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;m7dzMV6pGYbQRWHD&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;k1VJ7TaGFHYxWn9r&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Perasuolen&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Mage sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Phokieu
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">62%
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;7TZyAMYF12K6tWgX&quot;, &quot;Phokieu&quot;) ">
+	
+2 
+
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;vRxt6BnZrMbDThw9&quot;, &quot;Phokieu&quot;) ">
+	
+2 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;xf8RmDqTtJ4KhWVY&quot;, &quot;Phokieu&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;gmFp3JdtKaV2kbq9&quot;, &quot;Phokieu&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;m7dzMV6pGYbQRWHD&quot;, &quot;Phokieu&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;k1VJ7TaGFHYxWn9r&quot;, &quot;Phokieu&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Phokieu&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Phokieu&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="odd "><td class="Druid sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Prezenex
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">12%
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;7TZyAMYF12K6tWgX&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;vRxt6BnZrMbDThw9&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;jyabXgVfHmW41G6P&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;xf8RmDqTtJ4KhWVY&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;gmFp3JdtKaV2kbq9&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Q6x1nCFZJwR3WKbG&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;a3ZqyABvpn27fxY8&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;qMXtJz6pkb1hcgrw&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;dTpt9mAxXzRP7LbY&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Prezenex&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Paladin sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Purge
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">87%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Purge&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Purge&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Rogue sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Quietude
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">68%
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;7TZyAMYF12K6tWgX&quot;, &quot;Quietude&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;vRxt6BnZrMbDThw9&quot;, &quot;Quietude&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;jyabXgVfHmW41G6P&quot;, &quot;Quietude&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Quietude&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Quietude&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Warrior sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Relhok
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Relhok&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="odd "><td class="Warlock sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Riftare
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">68%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="benched " style="cursor:pointer " onclick="toggleBench(this, &quot;jyabXgVfHmW41G6P&quot;, &quot;Riftare&quot;) ">
+	
+2 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Riftare&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Riftare&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;qMXtJz6pkb1hcgrw&quot;, &quot;Riftare&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Riftare&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Riftare&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="even "><td class="Druid sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Ryiris
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">87%
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;7TZyAMYF12K6tWgX&quot;, &quot;Ryiris&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Ryiris&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Warlock sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Sarahrose
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Sarahrose&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="even "><td class="Priest sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Shraman
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Shraman&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Druid sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Somnya
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Somnya&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Warrior sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Suboptimal
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">81%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Suboptimal&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Suboptimal&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Suboptimal&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="odd "><td class="Mage sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Thaeddius
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Thaeddius&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Druid sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Tildera
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Tildera&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="odd "><td class="Rogue sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Villith
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">31%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Q6x1nCFZJwR3WKbG&quot;, &quot;Villith&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;a3ZqyABvpn27fxY8&quot;, &quot;Villith&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Bpzf7ZDVtNhnTWFb&quot;, &quot;Villith&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;GNCF4f9Z8PtDbTX6&quot;, &quot;Villith&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;qMXtJz6pkb1hcgrw&quot;, &quot;Villith&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;dTpt9mAxXzRP7LbY&quot;, &quot;Villith&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;m7dzMV6pGYbQRWHD&quot;, &quot;Villith&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;k1VJ7TaGFHYxWn9r&quot;, &quot;Villith&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Villith&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Villith&quot;) ">
+	
+ 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Villith&quot;) ">
+	
+ 
+
+</td></tr><tr role="row " class="even "><td class="Warlock sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Wanglin
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Wanglin&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="odd "><td class="Mage sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Zog
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">93%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;kntH6B2dYRWj4hDz&quot;, &quot;Zog&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+</td></tr><tr role="row " class="even "><td class="Hunter sorting_1 " style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis ">Zubash
+</td><td style="text-align:right; max-width:38px; width:38px; min-width:38px ">75%
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;jyabXgVfHmW41G6P&quot;, &quot;Zubash&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;Q6x1nCFZJwR3WKbG&quot;, &quot;Zubash&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;QHw27hrb1DnaGfMv&quot;, &quot;Zubash&quot;) ">
+	
+ 
+
+
+</td><td class="present ">
+	
+1 
+
+
+</td><td class="absent " style="cursor:pointer " onclick="toggleBench(this, &quot;abZF2rTd4jCnzLqA&quot;, &quot;Zubash&quot;) ">
+	
+ 
+
+</td></tr></tbody></table><div class="dt-buttons ui-buttonset "><button class="dt-button ui-button ui-state-default ui-button-text-only buttons-csv buttons-html5 " tabindex="0 " aria-controls="attendance-table " type="button "><span class="ui-button-text ">CSV</span></button> </div></div>
+</div>
+
+<div style="margin:1em " id="pagination-hook ">
+<ul class="pagination " role="navigation ">
+        
+                    <li class="page-item disabled " aria-disabled="true " aria-label="&amp;laquo; Previous ">
+                <span class="page-link " aria-hidden="true ">‹</span>
+            </li>
+        
+        
+                    
+            
+            
+                                                                        <li class="page-item active " aria-current="page "><span class="page-link ">1</span></li>
+                                                                                <li class="page-item "><a class="page-link " href="https://classic.warcraftlogs.com/guild/attendance-table/486574/0/0?page=2 " onclick="return setPage(2, this) " oncontextmenu="setPage(2, this) ">2</a></li>
+                                                                                <li class="page-item "><a class="page-link " href="https://classic.warcraftlogs.com/guild/attendance-table/486574/0/0?page=3 " onclick="return setPage(3, this) " oncontextmenu="setPage(3, this) ">3</a></li>
+                                                                                <li class="page-item "><a class="page-link " href="https://classic.warcraftlogs.com/guild/attendance-table/486574/0/0?page=4 " onclick="return setPage(4, this) " oncontextmenu="setPage(4, this) ">4</a></li>
+                                                        
+        
+                    <li class="page-item ">
+                <a class="page-link " href="https://classic.warcraftlogs.com/guild/attendance-table/486574/0/0?page=2 " rel="next " aria-label="Next &amp;raquo; " onclick="return setPage(2, this) " oncontextmenu="setPage(2, this) ">›</a>
+            </li>
+            </ul>
+
+</div>
+<script>
+$("#pagination-hook a ").each(function(index) { 
+	var text = $(this).attr("href ")
+	var index = text.lastIndexOf("=")
+	var pageNumber = text.substring(index + 1)
+	$(this).attr(" onclick ", "return setPage( " + pageNumber + ", this) "); $(this).attr("oncontextmenu ", "setPage( " + pageNumber + ", this) ");
+})
+</script>
+
+<script>
+var sortColumns = [[0, "asc "]]
+$('#attendance-table').dataTable({"bJQueryUI ": true,  "bPaginate ": false, "aaSorting ": sortColumns,
+        "bLengthChange ": false,
+        "bFilter ": false,
+        "bInfo ": false,
+        "dom ": 'tB',
+		"buttons ": [ 'csv' ]
+        });
+</script>
+
+</div> 
+</div>
+
+</div>
+
+
+<script>
+$("#attendance-command ").addClass('selected')
+$(window).trigger('hashchange')
+</script>
+
+</div>
+
+
+<div id="footer-spacer " class="unsubscribed "></div>
+
+<div id="footer ">
+
+
+<div id="bottom-banner ">
+
+<!-- Tag ID: warcraftlogs_728x90_970x90_970x250_320x50_BTF -->
+<div align="center " id="warcraftlogs_728x90_970x90_970x250_320x50_BTF ">
+<script data-cfasync="false " type="text/javascript ">
+    freestar.queue.push(function () { googletag.display('warcraftlogs_728x90_970x90_970x250_320x50_BTF'); });
+</script>
+</div>
+
+
+</div>
+
+
+<p>
+</p>
+
+© 2013-2020 Warcraft Logs - <a href="/help/contact/ ">Contact Us</a> - <a href="http://forums.combatlogforums.com ">Forums</a>
+- <a href="https://classic.warcraftlogs.com/home/discord ">Chat</a>
+- <a href="https://classic.warcraftlogs.com/help/start ">Help</a>
+- <a href="https://classic.warcraftlogs.com/help/privacy ">Privacy Policy</a>
+- <a href="https://www.patreon.com/warcraftlogs ">Donate</a>
+	- <a href="https://twitter.com/WarcraftLogs " class="zmdi zmdi-twitter " style="font-size:16px; vertical-align:-2px; ">
+</a>
+</div>
+</div>
+
+<script>
+	$(function() {
+		$("#searchfield-mini ").autocomplete({
+	      source: "https://classic.warcraftlogs.com/search/autocomplete ", minLength:2, autoFocus:true, appendTo: "#autocomplete-mini-results ", select: function( event, ui ) { window.location.href = ui.item.link; }
+	    }).autocomplete("instance ")._renderItem = function( ul, item ) {
+		    var item = $('<div class="master-autocomplete-item "><div class="label ' + item.labelClass + ' ">' + item.label + '</div><div class="server ">' + item.server + '</div><div class="type ">' + item.type + '</div></div>');
+			return $("<li>").append(item).appendTo(ul); }; $("#searchfield-mobile").autocomplete({ source: "https://classic.warcraftlogs.com/search/autocomplete", minLength:2, autoFocus:true, appendTo: "#autocomplete-mobile-results", select: function( event, ui ) { window.location.href = ui.item.link; } }).autocomplete("instance")._renderItem = function( ul, item ) { var item = $('<div class="master-autocomplete-item">
+													<div class="label ' + item.labelClass + '">' + item.label + '</div>
+													<div class="server">' + item.server + '</div>
+													<div class="type">' + item.type + '</div>
+												</div>'); return $("
+												<li>").append(item).appendTo(ul); }; });
+													</script>
+						</div>
+						<div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+						<div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+	</body>
+
+</html>
