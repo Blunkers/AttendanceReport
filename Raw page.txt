@@ -1,0 +1,4432 @@
+<p style="font-size:11px">Officers in the guild can click empty squares to designate a character as being on the bench for the entire night. Benched players show up with a <span class="benched-fg">gold background</span>.</p>
+
+
+<div style="overflow-x:auto">
+<table cellspacing=0 cellpadding=0 id="attendance-table">
+<thead>
+<th>Name
+<th>Att.%
+<th class="report-cell"><a id="reportdate-24065843" href="/reports/7TZyAMYF12K6tWgX/">
+Ony</a></th>
+<script>
+var createdDate = new Date(1583649965040)
+$("#reportdate-24065843").html($("#reportdate-24065843").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-24065834" href="/reports/vRxt6BnZrMbDThw9/">
+Mol</a></th>
+<script>
+var createdDate = new Date(1583643785628)
+$("#reportdate-24065834").html($("#reportdate-24065834").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-24044110" href="/reports/jyabXgVfHmW41G6P/">
+Bla</a></th>
+<script>
+var createdDate = new Date(1583557383793)
+$("#reportdate-24044110").html($("#reportdate-24044110").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23877699" href="/reports/xf8RmDqTtJ4KhWVY/">
+Ony</a></th>
+<script>
+var createdDate = new Date(1583044635044)
+$("#reportdate-23877699").html($("#reportdate-23877699").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23877692" href="/reports/gmFp3JdtKaV2kbq9/">
+Mol</a></th>
+<script>
+var createdDate = new Date(1583039021463)
+$("#reportdate-23877692").html($("#reportdate-23877692").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23857592" href="/reports/Q6x1nCFZJwR3WKbG/">
+Ony</a></th>
+<script>
+var createdDate = new Date(1582960089440)
+$("#reportdate-23857592").html($("#reportdate-23857592").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23855745" href="/reports/a3ZqyABvpn27fxY8/">
+Bla</a></th>
+<script>
+var createdDate = new Date(1582956157465)
+$("#reportdate-23855745").html($("#reportdate-23855745").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23683636" href="/reports/Bpzf7ZDVtNhnTWFb/">
+Ony</a></th>
+<script>
+var createdDate = new Date(1582436817029)
+$("#reportdate-23683636").html($("#reportdate-23683636").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23683622" href="/reports/GNCF4f9Z8PtDbTX6/">
+Mol</a></th>
+<script>
+var createdDate = new Date(1582430562175)
+$("#reportdate-23683622").html($("#reportdate-23683622").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23662377" href="/reports/qMXtJz6pkb1hcgrw/">
+Bla</a></th>
+<script>
+var createdDate = new Date(1582344444133)
+$("#reportdate-23662377").html($("#reportdate-23662377").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23526488" href="/reports/dTpt9mAxXzRP7LbY/">
+Mol</a></th>
+<script>
+var createdDate = new Date(1581918124301)
+$("#reportdate-23526488").html($("#reportdate-23526488").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23525525" href="/reports/m7dzMV6pGYbQRWHD/">
+Bla</a></th>
+<script>
+var createdDate = new Date(1581916674395)
+$("#reportdate-23525525").html($("#reportdate-23525525").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23497398" href="/reports/k1VJ7TaGFHYxWn9r/">
+Bla</a></th>
+<script>
+var createdDate = new Date(1581829613873)
+$("#reportdate-23497398").html($("#reportdate-23497398").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23474418" href="/reports/QHw27hrb1DnaGfMv/">
+Ony</a></th>
+<script>
+var createdDate = new Date(1581749886712)
+$("#reportdate-23474418").html($("#reportdate-23474418").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23373072" href="/reports/kntH6B2dYRWj4hDz/">
+Ony</a></th>
+<script>
+var createdDate = new Date(1581141690884)
+$("#reportdate-23373072").html($("#reportdate-23373072").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+<th class="report-cell"><a id="reportdate-23373037" href="/reports/abZF2rTd4jCnzLqA/">
+Ony</a></th>
+<script>
+var createdDate = new Date(1581138415902)
+$("#reportdate-23373037").html($("#reportdate-23373037").html() + "<br>" + (region == "US" || region == "NA" ? (createdDate.getMonth() + 1) + "/" + createdDate.getDate() : createdDate.getDate() + "/" + (createdDate.getMonth() + 1)))
+</script>
+
+</thead>
+<tbody>
+<tr><td class="Warrior" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Cherrykiss
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Cherrykiss")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Priest" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Narnok
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Narnok")'>
+	
+ 
+
+<tr><td class="Paladin" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Purge
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">87%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Purge")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Purge")'>
+	
+ 
+
+<tr><td class="Hunter" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Moonswept
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Moonswept")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Warrior" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Olfgrim
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "dTpt9mAxXzRP7LbY", "Olfgrim")'>
+	
+2 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Olfgrim")'>
+	
+ 
+
+<tr><td class="Warlock" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Riftare
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">68%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "jyabXgVfHmW41G6P", "Riftare")'>
+	
+2 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Riftare")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Riftare")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "qMXtJz6pkb1hcgrw", "Riftare")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Riftare")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Riftare")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Druid" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Tildera
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Tildera")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Warrior" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Relhok
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Relhok")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Priest" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Diethe
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">81%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Diethe")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Diethe")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Diethe")'>
+	
+ 
+
+<tr><td class="Druid" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Somnya
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Somnya")'>
+	
+ 
+
+<tr><td class="Warrior" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Habit
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">43%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Habit")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Habit")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "qMXtJz6pkb1hcgrw", "Habit")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "dTpt9mAxXzRP7LbY", "Habit")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "m7dzMV6pGYbQRWHD", "Habit")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "k1VJ7TaGFHYxWn9r", "Habit")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Habit")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Habit")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Habit")'>
+	
+ 
+
+<tr><td class="Warrior" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Cheerry
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Cheerry")'>
+	
+ 
+
+<tr><td class="Warrior" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Suboptimal
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">81%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Suboptimal")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Suboptimal")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Suboptimal")'>
+	
+ 
+
+<tr><td class="Mage" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Thaeddius
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Thaeddius")'>
+	
+ 
+
+<tr><td class="Mage" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Explosive
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">87%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Explosive")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Explosive")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Rogue" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Doki
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Doki")'>
+	
+ 
+
+<tr><td class="Rogue" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Aglovale
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">87%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Aglovale")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Aglovale")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Druid" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Dojacat
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">87%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "Q6x1nCFZJwR3WKbG", "Dojacat")'>
+	
+2 
+
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "a3ZqyABvpn27fxY8", "Dojacat")'>
+	
+2 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Dojacat")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Dojacat")'>
+	
+ 
+
+<tr><td class="Rogue" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Villith
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">31%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Q6x1nCFZJwR3WKbG", "Villith")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "a3ZqyABvpn27fxY8", "Villith")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Villith")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Villith")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "qMXtJz6pkb1hcgrw", "Villith")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "dTpt9mAxXzRP7LbY", "Villith")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "m7dzMV6pGYbQRWHD", "Villith")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "k1VJ7TaGFHYxWn9r", "Villith")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Villith")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Villith")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Villith")'>
+	
+ 
+
+<tr><td class="Paladin" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Luxvult
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Luxvult")'>
+	
+ 
+
+<tr><td class="Warlock" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Wanglin
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Wanglin")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Mage" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Zog
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Zog")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Hunter" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Felkon
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">87%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Felkon")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Felkon")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Warrior" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Blinkers
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Blinkers")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Rogue" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Kross
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">75%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "xf8RmDqTtJ4KhWVY", "Kross")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "gmFp3JdtKaV2kbq9", "Kross")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Kross")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Kross")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Rogue" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Justice
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Justice")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Paladin" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Justinius
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">87%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Justinius")'>
+	
+2 
+
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Justinius")'>
+	
+2 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Justinius")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Justinius")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Mage" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Coldhammer
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Coldhammer")'>
+	
+ 
+
+<tr><td class="Mage" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Clouddy
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Clouddy")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Priest" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Failbaddon
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">56%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "qMXtJz6pkb1hcgrw", "Failbaddon")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "dTpt9mAxXzRP7LbY", "Failbaddon")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "m7dzMV6pGYbQRWHD", "Failbaddon")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "k1VJ7TaGFHYxWn9r", "Failbaddon")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Failbaddon")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Failbaddon")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Failbaddon")'>
+	
+ 
+
+<tr><td class="Priest" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Shraman
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Shraman")'>
+	
+ 
+
+<tr><td class="Hunter" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Zubash
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">75%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "jyabXgVfHmW41G6P", "Zubash")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Q6x1nCFZJwR3WKbG", "Zubash")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Zubash")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Zubash")'>
+	
+ 
+
+<tr><td class="Paladin" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Hodanna
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Hodanna")'>
+	
+ 
+
+<tr><td class="Warlock" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Sarahrose
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">93%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Sarahrose")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Priest" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Buxxy
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">87%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Buxxy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Buxxy")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Paladin" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Goebel
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">56%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Goebel")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Goebel")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "m7dzMV6pGYbQRWHD", "Goebel")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "k1VJ7TaGFHYxWn9r", "Goebel")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Goebel")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Goebel")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Goebel")'>
+	
+ 
+
+<tr><td class="Warlock" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Azewla
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">68%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "xf8RmDqTtJ4KhWVY", "Azewla")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "gmFp3JdtKaV2kbq9", "Azewla")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Q6x1nCFZJwR3WKbG", "Azewla")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "a3ZqyABvpn27fxY8", "Azewla")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "dTpt9mAxXzRP7LbY", "Azewla")'>
+	
+2 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Azewla")'>
+	
+ 
+
+<tr><td class="Warrior" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Avalie
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">6%
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "vRxt6BnZrMbDThw9", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "jyabXgVfHmW41G6P", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "xf8RmDqTtJ4KhWVY", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "gmFp3JdtKaV2kbq9", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Q6x1nCFZJwR3WKbG", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "a3ZqyABvpn27fxY8", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "qMXtJz6pkb1hcgrw", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "dTpt9mAxXzRP7LbY", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "m7dzMV6pGYbQRWHD", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "k1VJ7TaGFHYxWn9r", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Avalie")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Avalie")'>
+	
+ 
+
+<tr><td class="Rogue" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Kirraa
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">87%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "jyabXgVfHmW41G6P", "Kirraa")'>
+	
+2 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Kirraa")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Kirraa")'>
+	
+ 
+
+<tr><td class="Hunter" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Jiada
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">18%
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "xf8RmDqTtJ4KhWVY", "Jiada")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "gmFp3JdtKaV2kbq9", "Jiada")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Q6x1nCFZJwR3WKbG", "Jiada")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "a3ZqyABvpn27fxY8", "Jiada")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Jiada")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Jiada")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "qMXtJz6pkb1hcgrw", "Jiada")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "dTpt9mAxXzRP7LbY", "Jiada")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "m7dzMV6pGYbQRWHD", "Jiada")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "k1VJ7TaGFHYxWn9r", "Jiada")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Jiada")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Jiada")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Jiada")'>
+	
+ 
+
+<tr><td class="Hunter" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Perasuolen
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">6%
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "7TZyAMYF12K6tWgX", "Perasuolen")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "jyabXgVfHmW41G6P", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "xf8RmDqTtJ4KhWVY", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "gmFp3JdtKaV2kbq9", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Q6x1nCFZJwR3WKbG", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "a3ZqyABvpn27fxY8", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "qMXtJz6pkb1hcgrw", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "dTpt9mAxXzRP7LbY", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "m7dzMV6pGYbQRWHD", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "k1VJ7TaGFHYxWn9r", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Perasuolen")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Perasuolen")'>
+	
+ 
+
+<tr><td class="Druid" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Ryiris
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">87%
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "7TZyAMYF12K6tWgX", "Ryiris")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Ryiris")'>
+	
+ 
+
+<tr><td class="Druid" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Arborholt
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">75%
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "7TZyAMYF12K6tWgX", "Arborholt")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "vRxt6BnZrMbDThw9", "Arborholt")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Arborholt")'>
+	
+2 
+
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Arborholt")'>
+	
+2 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Arborholt")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Arborholt")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Mage" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Phokieu
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">62%
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "7TZyAMYF12K6tWgX", "Phokieu")'>
+	
+2 
+
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "vRxt6BnZrMbDThw9", "Phokieu")'>
+	
+2 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "xf8RmDqTtJ4KhWVY", "Phokieu")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "gmFp3JdtKaV2kbq9", "Phokieu")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "m7dzMV6pGYbQRWHD", "Phokieu")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "k1VJ7TaGFHYxWn9r", "Phokieu")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Phokieu")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Phokieu")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Rogue" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Demoneye
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">75%
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "7TZyAMYF12K6tWgX", "Demoneye")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "vRxt6BnZrMbDThw9", "Demoneye")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Demoneye")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Demoneye")'>
+	
+ 
+
+<tr><td class="Rogue" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Quietude
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">68%
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "7TZyAMYF12K6tWgX", "Quietude")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "vRxt6BnZrMbDThw9", "Quietude")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "jyabXgVfHmW41G6P", "Quietude")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Quietude")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Quietude")'>
+	
+ 
+
+<tr><td class="Mage" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Arcameases
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">62%
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "7TZyAMYF12K6tWgX", "Arcameases")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "vRxt6BnZrMbDThw9", "Arcameases")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "jyabXgVfHmW41G6P", "Arcameases")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "xf8RmDqTtJ4KhWVY", "Arcameases")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "gmFp3JdtKaV2kbq9", "Arcameases")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="benched" style='cursor:pointer' onclick='toggleBench(this, "a3ZqyABvpn27fxY8", "Arcameases")'>
+	
+2 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Arcameases")'>
+	
+ 
+
+<tr><td class="Warrior" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Pelatov
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">12%
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "7TZyAMYF12K6tWgX", "Pelatov")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "vRxt6BnZrMbDThw9", "Pelatov")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "jyabXgVfHmW41G6P", "Pelatov")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "xf8RmDqTtJ4KhWVY", "Pelatov")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "gmFp3JdtKaV2kbq9", "Pelatov")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Q6x1nCFZJwR3WKbG", "Pelatov")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "a3ZqyABvpn27fxY8", "Pelatov")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Pelatov")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Pelatov")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "qMXtJz6pkb1hcgrw", "Pelatov")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "m7dzMV6pGYbQRWHD", "Pelatov")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "k1VJ7TaGFHYxWn9r", "Pelatov")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Pelatov")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Pelatov")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+<tr><td class="Druid" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Prezenex
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">12%
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "7TZyAMYF12K6tWgX", "Prezenex")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "vRxt6BnZrMbDThw9", "Prezenex")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "jyabXgVfHmW41G6P", "Prezenex")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "xf8RmDqTtJ4KhWVY", "Prezenex")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "gmFp3JdtKaV2kbq9", "Prezenex")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Q6x1nCFZJwR3WKbG", "Prezenex")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "a3ZqyABvpn27fxY8", "Prezenex")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Prezenex")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Prezenex")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "qMXtJz6pkb1hcgrw", "Prezenex")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "dTpt9mAxXzRP7LbY", "Prezenex")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Prezenex")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Prezenex")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Prezenex")'>
+	
+ 
+
+<tr><td class="Rogue" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Frappy
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">6%
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "7TZyAMYF12K6tWgX", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "vRxt6BnZrMbDThw9", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "jyabXgVfHmW41G6P", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "xf8RmDqTtJ4KhWVY", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "gmFp3JdtKaV2kbq9", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Q6x1nCFZJwR3WKbG", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "a3ZqyABvpn27fxY8", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "qMXtJz6pkb1hcgrw", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "dTpt9mAxXzRP7LbY", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "m7dzMV6pGYbQRWHD", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "k1VJ7TaGFHYxWn9r", "Frappy")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Frappy")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Frappy")'>
+	
+ 
+
+<tr><td class="Priest" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Ayreth
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">6%
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "7TZyAMYF12K6tWgX", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "vRxt6BnZrMbDThw9", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "jyabXgVfHmW41G6P", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "xf8RmDqTtJ4KhWVY", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "gmFp3JdtKaV2kbq9", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Q6x1nCFZJwR3WKbG", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "a3ZqyABvpn27fxY8", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "qMXtJz6pkb1hcgrw", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "dTpt9mAxXzRP7LbY", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "m7dzMV6pGYbQRWHD", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "k1VJ7TaGFHYxWn9r", "Ayreth")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Ayreth")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "abZF2rTd4jCnzLqA", "Ayreth")'>
+	
+ 
+
+<tr><td class="Paladin" style="white-space:nowrap;width:110px; min-width:110px; max-width:110px; overflow:hidden; text-overflow:ellipsis">Hevenswrath
+<td style="text-align:right; max-width:38px; width:38px; min-width:38px">6%
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "7TZyAMYF12K6tWgX", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "vRxt6BnZrMbDThw9", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "jyabXgVfHmW41G6P", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "xf8RmDqTtJ4KhWVY", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "gmFp3JdtKaV2kbq9", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Q6x1nCFZJwR3WKbG", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "a3ZqyABvpn27fxY8", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "Bpzf7ZDVtNhnTWFb", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "GNCF4f9Z8PtDbTX6", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "qMXtJz6pkb1hcgrw", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "dTpt9mAxXzRP7LbY", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "m7dzMV6pGYbQRWHD", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "k1VJ7TaGFHYxWn9r", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "QHw27hrb1DnaGfMv", "Hevenswrath")'>
+	
+ 
+
+
+<td class="absent" style='cursor:pointer' onclick='toggleBench(this, "kntH6B2dYRWj4hDz", "Hevenswrath")'>
+	
+ 
+
+
+<td class="present" >
+	
+1 
+
+</table>
+</div>
+
+<div style="margin:1em" id="pagination-hook">
+<ul class="pagination" role="navigation">
+        
+                    <li class="page-item disabled" aria-disabled="true" aria-label="&amp;laquo; Previous">
+                <span class="page-link" aria-hidden="true">&lsaquo;</span>
+            </li>
+        
+        
+                    
+            
+            
+                                                                        <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://classic.warcraftlogs.com/guild/attendance-table/486574/0/0?page=2">2</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://classic.warcraftlogs.com/guild/attendance-table/486574/0/0?page=3">3</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://classic.warcraftlogs.com/guild/attendance-table/486574/0/0?page=4">4</a></li>
+                                                        
+        
+                    <li class="page-item">
+                <a class="page-link" href="https://classic.warcraftlogs.com/guild/attendance-table/486574/0/0?page=2" rel="next" aria-label="Next &amp;raquo;">&rsaquo;</a>
+            </li>
+            </ul>
+
+</div>
+<script>
+$("#pagination-hook a").each(function(index) { 
+	var text = $(this).attr("href")
+	var index = text.lastIndexOf("=")
+	var pageNumber = text.substring(index + 1)
+	$(this).attr("onclick", "return setPage(" + pageNumber + ", this)"); $(this).attr("oncontextmenu", "setPage(" + pageNumber + ", this)");
+})
+</script>
+
+<script>
+var sortColumns = [[0, "asc"]]
+$('#attendance-table').dataTable({"bJQueryUI": true,  "bPaginate": false, "aaSorting": sortColumns,
+        "bLengthChange": false,
+        "bFilter": false,
+        "bInfo": false,
+        "dom": 'tB',
+		"buttons": [ 'csv' ]
+        });
+</script>
+

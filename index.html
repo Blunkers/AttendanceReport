@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Attendance Report</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.min.js"></script>
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-table.min.css">
-    <link rel="stylesheet" href="css/report.css">
-</head>
-
-<body>
+<script type="text/javascript" charset="utf-8">
+var region = "US";
+</script>
 <body>
 <div class="container">
     <form>
@@ -46,7 +40,13 @@
             </div>
         </div>
         
-        <a class="btn btn-primary" onclick="getAttendanceTable()" href="#">Generate Report</a>
+<a class="btn btn-primary" onclick="getAllAttendanceTables()" href="#">Get All Attendance Tables</a>
+
+<a class="btn btn-primary" onclick="analyzeAttendanceTable()" href="#">Analyze Table</a>
+
+<a class="btn btn-primary" onclick="getAttendanceLinks()" href="#">Get Attendance Links</a>
+
+<a class="btn btn-primary" onclick="findPlayer()" href="#">find Player</a>
     </form>
     <br>
     <div class="progress">
@@ -57,21 +57,6 @@
 </div>
 
 
-<div id="report-container" class="container" style="display: none;">
-    <ul>
-        <li>
-            <a data-toggle="collapse" href="#container-weekday-attendance-rates">View Attendance Rates</a>
-            <div id="container-weekday-attendance-rates" class="collapse">
-                <table id="tb-weekday-attendance-rates"></table>
-            </div>
-        </li>        
-    </ul>
-</div>
+<div id="report-container" class="container">
 
-<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/popper.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/bootstrap-table.min.js"></script>
-<script type="text/javascript" src="js/report.js"></script>
-</body>
-</html>
+  </div>
