@@ -13,7 +13,7 @@ var region = "US";
             <label for="inp-guild">GuildID</label>
             <input class="form-control" id="inp-guild" value="486574">
         </div>
-        <div class="form-group">
+        <div class="form-group" style="display: none;>
             <label>Zones</label>
             <div class="form-check">
                 <label class="form-check-label">
@@ -43,11 +43,11 @@ var region = "US";
         
 <a class="btn btn-primary" onclick="getAllAttendanceTables()" href="#">Get All Attendance Tables</a>
 
-<a class="btn btn-primary" onclick="analyzeAttendanceTable()" href="#">Analyze Table</a>
+<a class="btn btn-primary" onclick="analyzeAttendanceTable()" href="#">Analyze Table and download attendance csv</a>
 
-<a class="btn btn-primary" onclick="getAttendanceLinks()" href="#">Get Attendance Links</a>
+<a class="btn btn-primary" onclick="getAttendanceLinks()" href="#" style="display: none;">Get Attendance Links</a>
 
-<a class="btn btn-primary" onclick="findPlayer()" href="#">find Player</a>
+<a class="btn btn-primary" onclick="findPlayer()" href="#" style="display: none;">find Player</a>
     </form>
     <br>
     <div class="progress">
