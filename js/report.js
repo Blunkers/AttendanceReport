@@ -33,7 +33,10 @@ else {
 wclurl = getUrl;
 }
 
-var pageNum = wclurl.charAt(wclurl.length-1);
+var equalsSign = wclurl.indexOf("=") + 1;
+var pageNum = wclurl.substr(equalsSign,wclurl.length);
+
+//var pageNum = wclurl.charAt(wclurl.length-1);
 
 var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 
