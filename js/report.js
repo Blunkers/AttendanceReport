@@ -28,6 +28,7 @@ var wclurl;
 
 if (getUrl=="") {
 wclurl = 'https://classic.warcraftlogs.com/guild/attendance-table/' + guildID + '/0/0?page=1'; 
+//wclurl = 'https://classic.warcraftlogs.com/guild/attendance/' + guildID + '#page=1'; 
 }
 else {
 wclurl = getUrl;
@@ -61,10 +62,16 @@ $('#'+attTable).html(response);
     
 }
 
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
 function getAttendanceLinks(){
   var tableUrls = [];
   
-$('#attTable1').find('.page-link').each(function(){
+  $('#attTable1 #pagination-hook').find('a').each(function(){
+  
+//$('#attTable1').find('.page-link').each(function(){
 
 //$('#report-container').find('.page-link').each(function(){
 
@@ -73,12 +80,15 @@ $('#attTable1').find('.page-link').each(function(){
 tableUrls.push($(this).attr("href"));
 });
 
-tableUrls.pop();
-tableUrls = tableUrls.filter( Boolean );
 
-console.log(tableUrls);
+//tableUrls.pop();
+//tableUrls = tableUrls.filter( Boolean );
 
-return tableUrls;
+var tableUrlsUnique = tableUrls.filter(onlyUnique);
+
+console.log(tableUrlsUnique);
+
+return tableUrlsUnique;
 }
 
 function getAllAttendanceTables(){
