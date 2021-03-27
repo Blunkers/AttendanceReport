@@ -88,7 +88,23 @@ var tableUrlsUnique = tableUrls.filter(onlyUnique);
 
 console.log(tableUrlsUnique);
 
-return tableUrlsUnique;
+wclurl = tableUrlsUnique[tableUrlsUnique.length - 1];
+
+var equalsSign = wclurl.indexOf("=") + 1;
+var pageNum = wclurl.substr(equalsSign,wclurl.length);
+var pagelessUrl = wclurl.substr(0,equalsSign);
+console.log(pagelessUrl);
+
+var fullTableUrls = [];
+
+for (let i = 1; i <= pageNum; ++i) {
+fullTableUrls.push(pagelessUrl + i);
+}
+
+console.log(fullTableUrls);
+
+
+return fullTableUrls;
 }
 
 function getAllAttendanceTables(){
