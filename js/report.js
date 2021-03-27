@@ -126,6 +126,8 @@ var fixTable = [];
 var headerRow = ['Name', 'Att'];
 var cellHtml;
 
+
+// Fill in the Raid Date Row at the Top
 $('#attendance-table th a').each(function() {
     cellHtml = $(this).html().trim();
 cellHtml = cellHtml.replace(/(<|&lt;)br\s*\/*(>|&gt;)/g,' ');
@@ -136,6 +138,7 @@ console.log(headerRow);
 
 fixTable.push(headerRow);
 
+// Create the Player Column at the Left
 var playerList = [];
 
 $('#attendance-table tr').each(function() {
@@ -154,7 +157,9 @@ row.push($(this).html().trim());
   });
   
 var tableID = $(this).closest('.attTables').attr("id");
-var tableNumber = tableID.charAt(tableID.length-1);
+tableID = tableID.substr(8);
+var tableNumber = parseInt(tableID);
+
 var numRecords = Math.min(tableNumber*16, headerRow.length);
 
 if (playerExists > -1){
