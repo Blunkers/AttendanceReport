@@ -214,8 +214,10 @@ for (var j = 1; j<fixTable.length; j++){
 let csvContent = "data:text/csv;charset=utf-8,%EF%BB%BF";
 
 fixTable.forEach(function(rowArray) {
-    let row = rowArray.join(",");
-    csvContent += row + "\r\n";
+    let littleRow = rowArray;
+	littleRow.splice(1,1);
+	littleRow.join(",");
+    csvContent += littleRow + "\r\n";
 });
 
 var link = document.createElement("a");
